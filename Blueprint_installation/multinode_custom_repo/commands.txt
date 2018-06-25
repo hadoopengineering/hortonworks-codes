@@ -1,0 +1,23 @@
+Multi node HDP installation using blueprint
+-------------------------------------------
+1.Register Blue-print
+--------------------
+curl -H "X-Requested-By: ambari" -X POST -u admin:admin http://ip-172-31-7-29.ap-southeast-1.compute.internal:8080/api/v1/blueprints/multinode-hdp  -d @cluster_config.json
+
+2.Setup HDP Repo
+--------------
+ curl -H "X-Requested-By: ambari" -X PUT -u admin:admin http://ip-172-31-7-29.ap-southeast-1.computeinternal:8080/api/v1/stacks/HDP/versions/2.6/operating_systems/redhat6/repositories/HDP-2.6 -d @repo.json
+
+ curl -H "X-Requested-By: ambari" -X PUT -u admin:admin http://ip-172-31-7-29.ap-southeast-1.compute.internal:8080/api/v1/stacks/HDP/versions/2.6/operating_systems/redhat6/repositories/HDP-UTILS-1.1.0.21 -d @hdputil-repo.json
+ 
+
+
+3.Start the installation
+----------------------
+curl -H "X-Requested-By: ambari" -X POST -u admin:admin http://ip-172-31-7-29.ap-southeast-1.compute.internal:8080/api/v1/clusters/multinode-hdp -d @hostmap.json
+
+
+
+
+
+

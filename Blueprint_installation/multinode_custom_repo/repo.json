@@ -1,0 +1,6 @@
+{
+"Repositories" : {
+  "base_url" : "http://<ip-address-of-repo-server>/hdp/centos6/HDP-2.3.4.0",
+  "verify_base_url" : true
+}
+}

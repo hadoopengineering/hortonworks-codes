@@ -1,0 +1,30 @@
+{
+"blueprint" : "multinode-hdp",
+"default_password" : "hadoop",
+"host_groups" :[
+  {
+  "name" : "host2",
+  "hosts" : [
+  {
+  "fqdn" : "host2.crazyadmins.com"
+  }
+  ]
+  },
+  {
+  "name" : "host3",
+  "hosts" : [
+  {
+  "fqdn" : "host3.crazyadmins.com"
+  }
+  ]
+  },
+  {
+  "name" : "host4",
+  "hosts" : [
+  {
+  "fqdn" : "host4.crazyadmins.com"
+  }
+  ]
+  }
+]
+}
